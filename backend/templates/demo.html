@@ -1,0 +1,43 @@
+{% include "header.html" %}
+<section class="demo-page">
+  <div class="demo-container">
+    <h1>SafeSpeak Detector</h1>
+    <p>Paste text below and analyze it using our AI model.</p>
+    <form method="POST">
+      <textarea
+        name="text"
+        placeholder="Paste text for analysis..."
+        rows="8"
+        required
+      >
+{{ request.form.get('text', '') }}</textarea
+      >
+      <button type="submit" class="btn-primary">Analyze Text</button>
+    </form>
+    {% if prediction %}
+    <div class="result-card">
+      <h3>Prediction Result</h3>
+
+      <div class="result-item"><strong>Status:</strong> {{ prediction }}</div>
+
+      <div class="result-item mt-3">
+        <strong>Confidence Score</strong>
+
+        <div class="progress mt-2" style="height: 25px">
+          <div
+            class="progress-bar {% if prediction == 'Hate Speech Detected' %} bg-danger {% else %} background-color: #22f0cf; {% endif %}"
+            role="progressbar"
+            style="width: {{ confidence }}%;"
+            aria-valuenow="{{ confidence }}"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <strong>{{ confidence }}%</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+{% include "footer.html" %}

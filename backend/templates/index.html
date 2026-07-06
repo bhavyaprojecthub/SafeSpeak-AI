@@ -1,0 +1,114 @@
+{% include "header.html" %}
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0">
+                            Detect Hate
+                        </h1>
+                        <h1 class="mx-auto my-0">
+                            Protect Communities
+                        </h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">SafeSpeak uses machine learning to detect hate speech in real time helping students,educators,and communities build healthier digital conversations.</h2>
+                        <div class="hero-buttons">
+                            <a href="{{url_for('demo')}}" class="btn-primary">
+                                Try Demo →
+                            </a>
+                        
+                            <a href="#how" class="btn-secondary">
+                                See How It Works
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--About Section-->
+        <!-- About Section -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <div class="about-card">
+                    <span class="about-badge">ABOUT SAFESPEAK</span>
+
+                    <h2>Building Safer Digital Communities with AI</h2>
+
+                    <p>
+                        SafeSpeak is an AI-powered hate speech detection platform designed
+                        to help students, educators, researchers, and online communities
+                        identify harmful language in real time. By leveraging machine
+                        learning and natural language processing, SafeSpeak promotes
+                        healthier conversations and more inclusive digital spaces.
+                    </p>
+
+                    <div class="about-stats">
+                        <div>
+                            <h3>AI</h3>
+                            <span>Powered Detection</span>
+                        </div>
+
+                        <div>
+                            <h3>Real-Time</h3>
+                            <span>Analysis</span>
+                        </div>
+
+                        <div>
+                            <h3>Safe</h3>
+                            <span>Digital Spaces</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--How Section-->
+        <section class="how-section" id="how">
+            <div class="how-inner">
+              <div class="section-heading reveal visible how-header">
+                <h2>How it works</h2>
+              </div>
+              <div class="steps-grid">
+                <div class="step reveal visible">
+                  <div class="step-num">01</div>
+                  <h3>Enter your text</h3>
+                  <p>Paste a comment, message, or any piece of text you want to analyze into the input box.</p>
+                </div>
+                <div class="step reveal visible" style="transition-delay:0.1s">
+                  <div class="step-num">02</div>
+                  <h3>Model analyzes it</h3>
+                  <p>Our trained ML model processes the text, looking for patterns associated with hate speech across many categories.</p>
+                </div>
+                <div class="step reveal visible" style="transition-delay:0.2s">
+                  <div class="step-num">03</div>
+                  <h3>Get clear results</h3>
+                  <p>See a clear verdict of hate and non hatespeech with a confidence bar.</p>
+                </div>
+                <div class="step reveal visible" style="transition-delay:0.3s">
+                  <div class="step-num">04</div>
+                  <h3>Learn &amp; act</h3>
+                  <p>Use the insights for research, classroom discussions, or platform moderation — the choice is yours.</p>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section class="signup-section" id="signup">
+            <div class="signup-content">
+                <div class="signup-icon">
+                    ✉️
+                </div>
+                <h2>Stay Updated</h2>
+                <p>
+                    Get updates about new features, API releases,
+                    research insights, and SafeSpeak improvements.
+                </p>
+                <form class="signup-form">
+                    <input
+                        type="email"
+                        placeholder="Enter your email address..."
+                        required>
+                    <button type="submit" class="btn-primary">
+                        Notify Me →
+                    </button>
+                </form>
+            </div>
+        </section>
+{% include "footer.html" %}
