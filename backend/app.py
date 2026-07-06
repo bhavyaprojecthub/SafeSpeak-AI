@@ -2,7 +2,7 @@ from flask import Flask, request, render_template
 import os
 import torch
 from transformers import BertTokenizer
-from model import BERTClassifier
+from .model import BERTClassifier
 import torch.nn.functional as F
 from huggingface_hub import hf_hub_download
 
