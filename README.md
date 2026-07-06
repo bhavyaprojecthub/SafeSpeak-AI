@@ -152,12 +152,3 @@ Confidence:
 
 ---
 
-## 👨‍💻 Author
-
-Bhavya
-
-GitHub:
-(Add GitHub profile)
-
-LinkedIn:
-(Add LinkedIn profile)
