@@ -80,7 +80,7 @@ git clone <repository-url>
 Move into the project
 
 ```bash
-cd hate-speech-detector/backend
+cd SafeSpeak/backend
 ```
 
 Install dependencies
