@@ -16,8 +16,8 @@
                                 Try Demo →
                             </a>
                         
-                            <a href="#how" class="btn-secondary">
-                                See How It Works
+                            <a href="{{ url_for('how_it_works') }}" class="btn-secondary">
+                                Learn How It Works
                             </a>
                         </div>
                     </div>
@@ -64,51 +64,56 @@
         <section class="how-section" id="how">
             <div class="how-inner">
               <div class="section-heading reveal visible how-header">
-                <h2>How it works</h2>
+                <h2>How SafeSpeak Works</h2>
               </div>
               <div class="steps-grid">
                 <div class="step reveal visible">
                   <div class="step-num">01</div>
                   <h3>Enter your text</h3>
-                  <p>Paste a comment, message, or any piece of text you want to analyze into the input box.</p>
+                  <p>Paste any sentence, comment, social media post, or message
+                    into the text box for analysis.</p>
                 </div>
                 <div class="step reveal visible" style="transition-delay:0.1s">
                   <div class="step-num">02</div>
-                  <h3>Model analyzes it</h3>
-                  <p>Our trained ML model processes the text, looking for patterns associated with hate speech across many categories.</p>
+                  <h3>BERT Analyzes the Content</h3>
+                  <p> A pretrained BERT model processes the text, understands its
+                    context, and identifies linguistic patterns associated with
+                    hateful or non-hateful language.</p>
                 </div>
                 <div class="step reveal visible" style="transition-delay:0.2s">
                   <div class="step-num">03</div>
-                  <h3>Get clear results</h3>
-                  <p>See a clear verdict of hate and non hatespeech with a confidence bar.</p>
+                  <h3>Instant Prediction</h3>
+                  <p>SafeSpeak classifies the input as <strong>Hate Speech</strong>
+                    or <strong>Non-Hate Speech</strong> and displays the prediction
+                    confidence through an easy-to-read confidence bar.</p>
                 </div>
                 <div class="step reveal visible" style="transition-delay:0.3s">
                   <div class="step-num">04</div>
-                  <h3>Learn &amp; act</h3>
+                  <h3>Interpret the Results</h3>
                   <p>Use the insights for research, classroom discussions, or platform moderation — the choice is yours.</p>
                 </div>
               </div>
             </div>
         </section>
-        <section class="signup-section" id="signup">
-            <div class="signup-content">
-                <div class="signup-icon">
-                    ✉️
-                </div>
-                <h2>Stay Updated</h2>
-                <p>
-                    Get updates about new features, API releases,
-                    research insights, and SafeSpeak improvements.
-                </p>
-                <form class="signup-form">
-                    <input
-                        type="email"
-                        placeholder="Enter your email address..."
-                        required>
-                    <button type="submit" class="btn-primary">
-                        Notify Me →
-                    </button>
-                </form>
-            </div>
-        </section>
+      <section class="signup-section" id="explore">
+    <div class="signup-content">
+        <div class="signup-icon">
+            💻
+        </div>
+
+        <h2>Explore the Code</h2>
+
+        <p>
+            Curious about how SafeSpeak works? Explore the source code to see
+            how a pretrained BERT model, Flask backend, and responsive frontend
+            come together to deliver real-time hate speech detection.
+        </p>
+
+        <a href="https://github.com/bhavyaprojecthub/SafeSpeak-AI"
+           target="_blank"
+           class="btn-primary">
+            Explore Code →
+        </a>
+    </div>
+</section>
 {% include "footer.html" %}

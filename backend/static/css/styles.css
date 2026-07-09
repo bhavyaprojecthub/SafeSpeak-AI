@@ -14,7 +14,7 @@
   --bs-primary: #00c896;
   --bs-primary-rgb: 0, 200, 150;
 
-  --bs-secondary: #1e293b;
+  --bs-secondary: #1f293b;
   --bs-secondary-rgb: 30, 41, 59;
 
   --bs-success: #22c55e;
@@ -10950,8 +10950,16 @@ body {
 }
 
 #mainNav {
-  min-height: 3.5rem;
-  background-color: #fff;
+   min-height: 3.5rem;
+
+    background: transparent;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(20,224,192,.15);
+
+    box-shadow: 0 6px 25px rgba(0,0,0,.35);
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -11264,7 +11272,7 @@ body {
 .masthead .btn-primary {
   background-color: #00c896 !important;
   border-color: #00c896 !important;
-
+  color: rgb(255,255,255) !important;
   padding: 16px 40px;
   border-radius: 10px;
 
@@ -11279,9 +11287,9 @@ body {
 .masthead .btn-primary:hover {
   background-color: #00e5ab !important;
   border-color: #00e5ab !important;
-
+  color: rgb(255,255,255) !important;   /* Add this */
   transform: translateY(-2px);
-  box-shadow: 0 0 30px rgba(0, 229, 171, 0.6);
+  box-shadow: 0 0 30px rgba(0, 229, 171, 0.4);
 }
 
 .masthead::before {
@@ -11456,7 +11464,7 @@ body {
       #22f0cf 100%
   );
 
-  color: #03141f;
+  color: #212529;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -11476,8 +11484,8 @@ body {
   transform: translateY(-4px) scale(1.03);
 
   box-shadow:
-      0 0 25px rgba(34,240,207,0.8),
-      0 0 60px rgba(34,240,207,0.35);
+   
+      0 0 60px rgba(34,240,207,0.2);
 }
 
 /* ===========================

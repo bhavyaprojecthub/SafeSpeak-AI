@@ -2,17 +2,13 @@ from flask import Flask, request, render_template
 import os
 import torch
 from transformers import BertTokenizer
-from .model import BERTClassifier
+from model import BERTClassifier
 import torch.nn.functional as F
 from huggingface_hub import hf_hub_download
 
 app = Flask(__name__)
-
-# Load model and tokenizer
-# Load model and tokenizer
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
-# Get the absolute path of the backend folder
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 MODEL_DIR = os.path.join(BASE_DIR, "model")
@@ -20,7 +16,7 @@ os.makedirs(MODEL_DIR, exist_ok=True)
 
 MODEL_PATH = os.path.join(MODEL_DIR, "bert_model.pt")
 
-# Download the model if it doesn't exist
+
 if not os.path.exists(MODEL_PATH):
     print("Downloading model from Hugging Face...")
 
@@ -57,7 +53,6 @@ def predict(text):
 
         outputs = model(input_ids, attention_mask)
 
-        # Convert logits to probabilities
         probabilities = F.softmax(outputs, dim=1)
 
         confidence, prediction = torch.max(probabilities, dim=1)
@@ -92,5 +87,10 @@ def demo():
         prediction=prediction,
         confidence=confidence
     )
+
+@app.route("/how-it-works")
+def how_it_works():
+    return render_template("how_it_works.html")
+
 if __name__ == "__main__":
     app.run(debug=True)
