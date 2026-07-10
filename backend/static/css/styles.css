@@ -39,6 +39,7 @@
   --bs-link-hover-color: #00e5ab;
 }
 
+
 *,
 *::before,
 *::after {
@@ -10943,10 +10944,12 @@ textarea.form-control-lg {
 }
 html {
   scroll-padding-top: calc(4.5rem - 1px);
+  overflow-x: hidden;
 }
 
 body {
   letter-spacing: 0.0625em;
+  overflow-x: hidden;
 }
 
 #mainNav {
@@ -11079,6 +11082,7 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 15rem 0;
+  overflow: hidden;
 
   background:
     radial-gradient(
